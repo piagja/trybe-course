@@ -2,3 +2,5 @@
 - Bash
 - Git
 - Javascript
+- HTML
+- CSS
