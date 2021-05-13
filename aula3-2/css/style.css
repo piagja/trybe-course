@@ -1,0 +1,29 @@
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 65px;
+  color: orange;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+ul {
+  background-color: azure;
+}
+
+.bgColor {
+  background-color: bisque;
+}
+
+p {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+li {
+  line-height: 26px;
+  background-color: thistle;
+}
