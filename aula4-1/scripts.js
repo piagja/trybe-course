@@ -139,8 +139,22 @@ function turnIntoGrades(note) {
 console.log('\nExercicio 7')
 turnIntoGrades(2)
 
-// Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
-// Bonus: use somente um if .
+// 8. Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
+// Bonus: use somente um if0.
+function haveEven(a, b, c) {
+  let evenNumber = a % 2 === 0 || b % 2 === 0 || c % 2 === 0
+  let isEven;
+  if (!evenNumber) {
+    isEven = false
+  } else {
+    isEven = true
+  }
+
+  return isEven
+}
+console.log('\nExercício 8')
+console.log(haveEven(7, 5, 9))
+
 // Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
 // Bonus: use somente um if .
 // Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
