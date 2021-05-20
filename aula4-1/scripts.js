@@ -106,7 +106,7 @@ function movementsChessPieces(piece) {
 console.log('\nExercicio 6')
 movementsChessPieces('BiShOp')
 
-// Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+// 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 // Porcentagem >= 90 -> A
 // Porcentagem >= 80 -> B
 // Porcentagem >= 70 -> C
@@ -114,6 +114,31 @@ movementsChessPieces('BiShOp')
 // Porcentagem >= 50 -> E
 // Porcentagem < 50 -> F
 // O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
+function turnIntoGrades(note) {
+  if (note >= 90 && note <= 100) {
+    console.log('Your grade is A')
+  } else if (note >= 80 && note <= 90) {
+    console.log('Your grande is B')
+  } else if (note >= 70 && note <= 80) {
+    console.log('Your grande is C')
+  } else if (note >= 60 && note <= 70) {
+    console.log('Your grande is D')
+  } else if (note >= 50 && note <= 60) {
+    console.log('Your grande is E')
+  } else if (note < 50 && note >= 1 ) {
+    console.log('Your grande is F')
+  } else if (note >= 101) {
+    console.log('Over 100% note')
+  } else if (note < 0 ) {
+    console.log('Negative note!')
+  } else {
+    console.log('Maybe ... you got a 0!')
+  }
+}
+
+console.log('\nExercicio 7')
+turnIntoGrades(2)
+
 // Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
 // Bonus: use somente um if .
 // Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
