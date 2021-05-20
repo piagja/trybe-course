@@ -65,6 +65,8 @@ console.log('')
 console.log(isMoreThanZero(0))
 
 // 5. Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+// Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
+// Um ângulo será considerado inválido se não tiver um valor positivo.
 console.log('\nExercício 5')
 function checkTriangle(a, b, c) {
   let isTriangle = a + b + c === 180
@@ -78,13 +80,32 @@ function checkTriangle(a, b, c) {
 }
 console.log(checkTriangle(50, 50, 80))
 
-// Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
-// Um ângulo será considerado inválido se não tiver um valor positivo.
-// Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+// 6. Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
 // Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
 // Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case) .
 // Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
 // Exemplo: bishop (bispo) -> diagonals (diagonais)
+function movementsChessPieces(piece) {
+  let lowerPiece = piece.toLowerCase()
+  if (lowerPiece === 'bishop') {
+    console.log('Bishops moves diagonally')
+  } else if (lowerPiece === 'pawn') {
+    console.log('Pawns moves one square ahead or two if is the first movement')
+  } else if (lowerPiece === 'knight') {
+    console.log('Knights move in a L shape')
+  } else if (lowerPiece === 'rook') {
+    console.log('Rooks moves horizontally and vertically')
+  } else if (lowerPiece === 'queen') {
+    console.log('Queen move diagonally, vertically and horizontally. As a bishop and rook together')
+  } else if (lowerPiece === 'king') {
+    console.log('King move to one of the eight squares around it')
+  } else {
+    console.log('Invalid chess piece')
+  }
+}
+console.log('\nExercicio 6')
+movementsChessPieces('BiShOp')
+
 // Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 // Porcentagem >= 90 -> A
 // Porcentagem >= 80 -> B
