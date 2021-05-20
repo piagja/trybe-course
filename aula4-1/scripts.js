@@ -153,10 +153,24 @@ function haveEven(a, b, c) {
   return isEven
 }
 console.log('\nExercício 8')
-console.log(haveEven(7, 5, 9))
+console.log(haveEven(2, 4, 6))
 
-// Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
+// 9. Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
 // Bonus: use somente um if .
+function haveOdd(a, b, c) {
+  let evenNumber = a % 2 === 0 || b % 2 === 0 || c % 2 === 0
+  let isEven;
+  if (!evenNumber) {
+    isEven = true
+  } else {
+    isEven = false
+  }
+
+  return isEven
+}
+console.log('\nExercício 9')
+console.log(haveOdd(1, 3, 5))
+
 // Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
 // Atente que, sobre o custo do produto, incide um imposto de 20%.
 // Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
