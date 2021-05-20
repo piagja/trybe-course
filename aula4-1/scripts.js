@@ -178,7 +178,7 @@ console.log(haveOdd(1, 3, 5))
 // valorCustoTotal = valorCusto + impostoSobreOCusto
 // lucro = valorVenda - valorCustoTotal (lucro de um produto)
 function productProfit(productCost, productValue) {
-  let taxOverProductCost = productCost * 0.2
+  let taxOverProductCost = productCost * 1.2
   let profit = productValue - taxOverProductCost - productCost
 
   if (productCost < 0 || productValue < 0) {
@@ -189,12 +189,12 @@ function productProfit(productCost, productValue) {
     console.log(`You have a profit of $${profit}`)
   }
 
-  return `Your product value: $${productValue}. Tax over a $${productCost} product: $${taxOverProductCost}.`
+  return `Your product value: $${productValue}. Tax over a $${productCost} product: $${taxOverProductCost}`
 }
 console.log('\nExercício 10')
-console.log(productProfit(1000, 700))
+console.log(productProfit(1, 3))
 
-// Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+// 11. Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 // A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. Para as faixas de impostos, use as seguintes referências:
 // INSS (Instituto Nacional do Seguro Social)
 // Salário bruto até R$ 1.556,94: alíquota de 8%
@@ -218,3 +218,35 @@ console.log(productProfit(1000, 700))
 // O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
 // Resultado: R$ 2.612,55.
 // Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
+function impostoDeRenda(salary) {
+  let aliquotaINSS;
+  
+  if (salary <= 1556,94) {
+    aliquotaINSS = salary * 0.08;
+  } else if (salary >= 1556.94 && salary <= 2594.92) {
+    aliquotaINSS = salary * 0.09;
+  } else if (salary >= 2594.93 && salary <= 5189.82) {
+    aliquotaINSS = salary * 0.11;
+  } else if (salary >= 5189.83) {
+    aliquotaINSS = 570.88;
+  }
+  let aliquotaIR;
+  
+  let baseSalary = salary - aliquotaINSS
+  
+  if (baseSalary <= 1903.98) {
+    aliquotaIR = 0
+  }  else if (baseSalary <= 2826.65) {
+    aliquotaIR = (baseSalary * 0.075) - 142.80;
+  } else if (baseSalary <= 3751.05) {
+    aliquotaIR = (baseSalary * 0.15) - 354.80;
+  } else if (baseSalary <= 4664.68) {
+    aliquotaIR = (baseSalary * 0.225) - 636.13;
+  } else {
+    aliquotaIR = (baseSalary * 0.275) - 869.36;
+  };
+  let liquidSalary = (baseSalary - aliquotaIR).toFixed(2)
+  return liquidSalary
+}
+console.log('\nExercicio 11')
+console.log(impostoDeRenda(1903.99))
