@@ -42,11 +42,27 @@ console.log(Math.max(aMax, bMax));
 
 // 3. Faça um programa que retorne o maior de três números. Defina no começo do programa três variáveis com os valores que serão comparados.
 console.log('\nExercício 3');
-let cMax = 5
-let dMax = 7
-let eMax = 9
-console.log(Math.max(cMax, dMax, eMax))
-// Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+let cMax = 5;
+let dMax = 7;
+let eMax = 9;
+console.log(Math.max(cMax, dMax, eMax));
+
+// 4. Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+console.log('\nExercício 4')
+function isMoreThanZero(num) {
+  let positive;
+  if (num > 0) {
+    positive = `The number ${num} is positive.`;
+  } else if (num < 0) {
+    positive = `The number ${num} is negative.`;
+  } else {
+    positive = `The number is zero or don't apply.`;
+  }
+
+  return positive
+}
+console.log(isMoreThanZero(0))
+
 // Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
 // Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
 // Um ângulo será considerado inválido se não tiver um valor positivo.
