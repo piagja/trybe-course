@@ -70,7 +70,7 @@ for (let index = 1; index < numbers.length; index += 1) {
 console.log(maxNumber)
 
 // 6. Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
-console.log('\nExercício 5')
+console.log('\nExercício 6')
 let odds = 0
 for (let index = 0; index < numbers.length; index += 1) {
   if (numbers[index] % 2 !== 0) {
@@ -86,3 +86,16 @@ if (odds === 0) {
   // do contrário, retorna quantos impares tem
   console.log(odds)
 }
+
+// 7. Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+console.log('\nExercício 7')
+let minNumber = numbers[0]
+for (let index = 0; index < numbers.length; index += 1) {
+  // verifica se o numero da lista é menor que o menor numero contido em numbers[0] (que é igual a 5)
+  if (numbers[index] < minNumber) {
+    // coloca esse numero pra dentro
+    minNumber = numbers[index]
+  }
+}
+
+console.log(minNumber)
