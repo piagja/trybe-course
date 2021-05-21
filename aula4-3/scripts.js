@@ -38,3 +38,29 @@ function quadrado(num) {
 }
 
 quadrado(2)
+
+// 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
+// Copiar
+// n = 5
+
+// *
+// **
+// ***
+// ****
+// *****
+console.log('\nExercicio 2')
+function triangulo(num) {
+  let asterisco = '*'
+  let novaLinha = ''
+
+  if (num <= 0) {
+    console.log('Não é possível executar com zero ou número negativo')
+  } else {
+    for (let linha = 0; linha < num; linha += 1) {
+      console.log(novaLinha)
+      novaLinha = novaLinha + asterisco
+    }
+  }
+}
+
+triangulo(10)
