@@ -19,7 +19,7 @@
    *****
    *****
    ***** */
-console.log('\nExercicio 2')
+console.log('\nExercicio 1')
 function quadrado(num) {
   let asterisco = '*'
   let novaLinha = ''
@@ -37,7 +37,7 @@ function quadrado(num) {
   }
 }
 
-quadrado(2)
+quadrado(4)
 
 // 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
 // Copiar
@@ -64,3 +64,36 @@ function triangulo(num) {
 }
 
 triangulo(10)
+
+// 3- Agora inverta o lado do triângulo. Por exemplo:
+// Copiar
+// n = 5
+
+//     *
+//    **
+//   ***
+//  ****
+// *****
+// Atenção! Note que esse exercício é bem mais complexo que o anterior! Não basta, aqui, imprimir somente asteriscos. Você precisará de uma lógica para imprimir espaços também.
+console.log('\nExercicio 3')
+function trianguloDois(num) {
+  let n = num;
+  let symbol = '*';
+  let inputLine = '';
+  let inputPosition = n;
+
+  for (let linhaIndice = 0; linhaIndice < n; linhaIndice += 1) {
+    for (let colunaIndice = 0; colunaIndice <= n; colunaIndice += 1) {
+      if (colunaIndice < inputPosition) {
+        inputLine = inputLine + ' ';
+      } else {
+        inputLine = inputLine + symbol;
+      }
+    }
+    console.log(inputLine)
+    inputLine = '';
+    inputPosition -= 1;
+  }
+}
+
+trianguloDois(5)
