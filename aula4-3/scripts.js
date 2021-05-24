@@ -97,3 +97,32 @@ function trianguloDois(num) {
 }
 
 trianguloDois(5)
+
+// 4- Depois, faça uma pirâmide com n asteriscos de base:
+
+console.log('\nExercicio 3')
+function trianguloTres(num) {
+  let n = num;
+  let symbol = '*';
+  let inputLine = '';
+  let meioDeTudo = (n + 1) / 2;
+  let meioPraEsquerda = meioDeTudo;
+  let meioPraDireita = meioDeTudo;
+
+  for (let linhaIndice = 0; linhaIndice <= meioDeTudo; linhaIndice += 1) {
+    for (let colunaIndice = 0; colunaIndice <= n; colunaIndice += 1) {
+      if (colunaIndice > meioPraEsquerda && colunaIndice < meioPraDireita) {
+        inputLine = inputLine + symbol;
+      } else {
+        inputLine = inputLine + ' ';
+      }
+    }
+    console.log(inputLine)
+    inputLine = '';
+    meioPraDireita += 1
+    meioPraEsquerda -= 1
+    
+  }
+}
+
+trianguloTres(5)
