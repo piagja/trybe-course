@@ -5,6 +5,7 @@
 // verificaPalindrome('desenvolvimento') ;
 // Retorno esperado: false
 
+console.log('\nExercício 1')
 function isPalindrome(word) {
   /**
    * comentar aqui cada passo a passo que tenho
@@ -22,10 +23,10 @@ function isPalindrome(word) {
 
   for (let index = 0; index < word.length / 2; index += 1) {
     // depois de muitos few moments later ...
-    // a gente vai comparar o indice de cada letra da palavra;
+    // a gente vai comparar o indice de cada letra da palavra
     // depois checa se o indice da palavra é diferente do
     // indice final de cada letra da palavra sendo
-    // "regredido" do final pro inicial (por isso o -1 e menos o INDEX)
+    // "regredido" do final pro inicial (por isso o -1 menos o INDEX)
     // dessa forma ele acessa o ultimo indice e vem voltando pro inicio
     // sendo checado o primeiro com o ultimo, o segundo com o penultimo,
     // o terceiro com o antepenultimo e assim em diante!
@@ -34,17 +35,45 @@ function isPalindrome(word) {
       return false;
     }
   }
+  // aqui é o retorno esperado de um palíndromo
   return true;
 }
-console.log(isPalindrome('desenvolvimento')); // output esperado: false
-console.log(isPalindrome('arara')); // output esperado: true
+console.log(`Desenvolvimento é Palíndromo? ${isPalindrome('desenvolvimento')}`); // output esperado: false
+console.log(`Arara é Palíndromo? ${isPalindrome('arara')}`);
 
 // 2. Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 // Array de teste: [2, 3, 6, 7, 10, 1]; .
 // Valor esperado no retorno da função: 4 .
+console.log('\nExercício 2')
+function maxIndexValue(array) {
+  let maxIndex = 0
+  for (let index in array) {
+    if (array[maxIndex] < array[index]) {
+      maxIndex = index
+    }
+  }
+
+  return maxIndex;
+}
+console.log(maxIndexValue([2, 3, 6, 7, 10, 1]));
+
 // 3. Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 // Array de teste: [2, 4, 6, 7, 10, 0, -3]; .
 // Valor esperado no retorno da função: 6 .
+
+console.log('\nExercício 3')
+function minIndexValue(array) {
+  let maxIndex = 0
+  for (let index in array) {
+    if (array[maxIndex] > array[index]) {
+      maxIndex = index
+    }
+  }
+
+  return maxIndex;
+}
+console.log(minIndexValue([2, 4, 6, 7, 10, 0, -3]))
+
 // 4. Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
 // Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
 // Valor esperado no retorno da função: Fernanda .
