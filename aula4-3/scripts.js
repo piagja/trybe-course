@@ -19,7 +19,7 @@
    *****
    *****
    ***** */
-
+console.log('\nExercicio 2')
 function quadrado(num) {
   let asterisco = '*'
   let novaLinha = ''
