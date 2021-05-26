@@ -27,6 +27,26 @@
       .main-content .center-content p {
         font-style: italic;
       }
+
+      #exec-button-area {
+        margin: 20px 0 0 0;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      #exec-button-area button {
+        margin: 0 8px 0 0;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -38,6 +58,15 @@
         <p>Trybe</p>
       </div>
     </div>
+    <section id='exec-button-area'>
+      <button onclick="textFromMe('p')">Mudar Texto</button>
+      <button onclick="yellowToTrybeGreen('main-content')">Cor Amarelo > Verde Trybe</button>
+      <button onclick="redToWhite('center-content')">Cor Vermelho > Branco</button>
+      <button onclick="correctSpelling('title')">Corrigir o Título</button>
+      <button onclick="toCapitalCase('p')">Transformar para Maiúsculo</button>
+      <button onclick="showInConsole('p')">Mostrar tag P no console</button>
+      <button onclick="showHide('.main-content')">Mostrar/Esconder</button>
+    </section>
     <script>
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
@@ -51,6 +80,49 @@
         5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+
+        function textFromMe(element) {
+          document.getElementsByTagName(element)[0].innerText = 'Textão que falaria sobre mim daqui a 2 anos!';
+        }
+
+        function yellowToTrybeGreen(element) {
+          document.getElementsByClassName(element)[0].style.backgroundColor = 'rgb(76,164,109)';
+        }
+
+        function redToWhite(element) {
+          document.getElementsByClassName(element)[0].style.backgroundColor = '#fff';
+        }
+
+        function correctSpelling(element) {
+          document.getElementsByClassName(element)[0].innerText = 'Exercício 5.1 - JavaScript';
+        }
+
+        function toCapitalCase(element) {
+          // document.getElementsByTagName(element)[0].innerText = 'Textão que falaria sobre mim daqui a 2 anos!'.toUpperCase();
+          let pList = document.getElementsByTagName(element)
+
+          for (let index in pList) {
+            pList[index].innerText = pList[index].innerText.toUpperCase()
+          }
+        }
+
+        function showInConsole(element) {
+          let showInConsole = document.getElementsByTagName(element);
+
+          for (key in showInConsole) {
+            console.log(showInConsole[key].innerText);
+          }
+        }
+
+        function showHide(element) {
+          const el = document.querySelector(element)
+          
+          if (el.style.display !== 'none') {
+            el.style.display = 'none'
+          } else {
+            el.style.display = 'block'
+          }
+        }
     </script>
   </body>
 </html>
