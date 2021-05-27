@@ -98,10 +98,10 @@
       // exercicio 8
       const ul = document.createElement('ul');
       divRightContent.appendChild(ul);
-      
+
       for (let index = 1; index < 11; index += 1) {
         const li = document.createElement('li');
-        
+
         if (index === 1) li.innerText = 'um';
         if (index === 2) li.innerText = 'dois';
         if (index === 3) li.innerText = 'tres';
@@ -112,8 +112,18 @@
         if (index === 8) li.innerText = 'oito';
         if (index === 9) li.innerText = 'nove';
         if (index === 10) li.innerText = 'dez';
-        
+
+        li.style.color = 'white';
+
         ul.appendChild(li);
+      }
+      // exercicio 15 ou exercicio bonus 6
+      if (ul.lastChild.textContent === 'dez') {
+        ul.removeChild(ul.lastChild)
+      }
+
+      if (ul.lastChild.textContent === 'nove') {
+        ul.removeChild(ul.lastChild)
       }
 
       // exercicio 9
@@ -136,7 +146,7 @@
       divRightContent.style.marginRight = 'auto';
 
       // exercicio 14 ou exercicio bonus 5
-      centerContentDiv.parentElement.style.backgroundColor = 'darkgreen'
+      centerContentDiv.parentElement.style.backgroundColor = 'darkgreen';
     </script>
   </body>
 </html>
@@ -157,7 +167,7 @@ Agora que você criou muita coisa, vamos fazer algumas alterações e remoções
 //11 Adicione a classe description nas 3 tags h3 criadas;
 //12 Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a //função .removeChild() ;
 //13 Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
-14 Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
-15 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8. 
+//14 Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+//15 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8. 
 
 -->
