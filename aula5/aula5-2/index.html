@@ -64,6 +64,11 @@
 
       const mainContentDiv = document.createElement('div');
       mainContentDiv.classList.add('main-content');
+      body.appendChild(mainContentDiv);
+
+      const centerContentDiv = document.createElement('div');
+      centerContentDiv.classList.add('center-content');
+      mainContentDiv.appendChild(centerContentDiv);
     </script>
   </body>
 </html>
