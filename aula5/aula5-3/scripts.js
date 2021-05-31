@@ -18,8 +18,11 @@ window.onload = onLoad()
 
 function onLoad () {
   holidays("Feriados");
+  fridays("Sexta-Feira");
   clickToHolidays();
+  clickToFridays();
 }
+
 
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const daysContainer = document.querySelector('#days');
@@ -38,27 +41,52 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
   if (numeroDia === 4 || numeroDia === 11 || numeroDia === 18) li.setAttribute('class', 'day friday');
 }
 
-function holidays(feriados) {
+function holidays(string) {
   const btnContainer = document.querySelector('.buttons-container');
   const btn = document.createElement('button');
   btn.setAttribute('id', 'btn-holiday');
-  btn.innerText = feriados;
+  btn.innerText = string;
   btnContainer.appendChild(btn);
 }
 
 function clickToHolidays () {
   const btn = document.querySelector('#btn-holiday');
-  btn.addEventListener('click', () => setHighlight())
+  btn.addEventListener('click', () => setHighlightHolidays());
 }
 
-function setHighlight () {
+function setHighlightHolidays () {
   const li = document.getElementsByClassName('day');
   for (let index = 0; index < li.length; index += 1) {
     const day = li[index];
-    const holidays = day.classList.contains('holiday')
+    const holidays = day.classList.contains("holiday");
 
     if (holidays === true) {
-      day.classList.toggle('highlight')
+      day.classList.toggle("highlight");
+    }
+  }
+}
+
+function fridays(string) {
+  const btnContainer = document.querySelector(".buttons-container");
+  const btn = document.createElement("button");
+  btn.setAttribute("id", "btn-friday");
+  btn.innerText = string;
+  btnContainer.appendChild(btn);
+}
+
+function clickToFridays () {
+  const btn = document.querySelector('#btn-friday');
+  btn.addEventListener("click", () => setHighlightFridays());
+}
+
+function setHighlightFridays () {
+  const li = document.getElementsByClassName('day');
+  for (let index = 0; index < li.length; index += 1) {
+    const day = li[index];
+    const holidays = day.classList.contains("friday");
+
+    if (holidays === true) {
+      day.classList.toggle("highlight");
     }
   }
 }
