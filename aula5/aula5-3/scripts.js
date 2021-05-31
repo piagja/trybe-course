@@ -21,6 +21,11 @@ function onLoad () {
   fridays("Sexta-Feira");
   clickToHolidays();
   clickToFridays();
+
+  setScaleHover();
+  unsetScaleHover();
+
+  addItem();
 }
 
 
@@ -102,5 +107,37 @@ function setHighlightFridays () {
     }
   }
 }
-
 /* fim das funções em relação a anotar o feriado e sextas-feiras */
+
+function setScaleHover () {
+  const li = document.getElementsByClassName("day");
+  for (let index = 0; index < li.length; index += 1) {
+    const day = li[index];
+    day.addEventListener("mouseover", function (event) {
+      event.target.style.transform = "scale(1.5)";
+    })
+  }
+}
+
+function unsetScaleHover () {
+  const li = document.getElementsByClassName("day");
+  for (let index = 0; index < li.length; index += 1) {
+    const day = li[index];
+    day.addEventListener("mouseout", function (event) {
+      event.target.style.transform = "scale(1)";
+    })
+  } 
+}
+
+function addItem () {
+  const input = document.querySelector("#task-input");
+  const btn = document.querySelector("#btn-add");
+  const taskArea = document.querySelector(".my-tasks");
+
+  btn.addEventListener("click", function () {
+    const span = document.createElement("span");
+    span.innerHTML = input.value;
+    span.style.display = "block";
+    taskArea.appendChild(span);
+  })
+}
