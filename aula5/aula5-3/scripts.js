@@ -26,6 +26,8 @@ function onLoad () {
   unsetScaleHover();
 
   addItem();
+
+  addDivColor("green");
 }
 
 
@@ -133,6 +135,7 @@ function addItem () {
   const input = document.querySelector("#task-input");
   const btn = document.querySelector("#btn-add");
   const taskArea = document.querySelector(".my-tasks");
+  
 
   btn.addEventListener("click", function () {
     const span = document.createElement("span");
@@ -141,3 +144,40 @@ function addItem () {
     taskArea.appendChild(span);
   })
 }
+
+function addDivColor (color) {
+  const div = document.createElement("div");
+  const taskArea = document.querySelector(".my-tasks");
+
+  div.className = "task";
+  div.style.backgroundColor = color;
+
+  taskArea.appendChild(div);
+
+  div.addEventListener("click", function (event) {
+    if (event.target.className === "task") {
+      div.className = "task selected";
+    } else {
+      div.className = "task"
+    }
+  })
+}
+
+function setDayColor () {
+  const days = document.querySelector("#days");
+  const selectedTask = document.getElementsByClassName("selected task");
+  const divTask = document.querySelector(".task");
+  const colorTask = divTask.style.color;
+
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== colorTask) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === colorTask && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+}
+
+setDayColor()
