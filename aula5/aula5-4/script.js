@@ -2,6 +2,7 @@ window.onload = function () {
   changeBgColor();
   changeTextColor();
   changeFontSize();
+  changeLineHeight();
 }
 
 function changeBgColor () {
@@ -54,5 +55,16 @@ function changeFontSize () {
       const inputValue = inputFontSize.value;
       divTextArea.style.fontSize = `${inputValue}px`;
     }
+  })
+}
+
+function changeLineHeight () {
+  const divTextArea = document.querySelector("#text-area");
+  const btnLineHeight = document.querySelector(".lineheight-click");
+  const inputLineHeight = document.querySelector(".lineheight");
+
+  btnLineHeight.addEventListener("click", function () {
+    const inputValue = inputLineHeight.value;
+    divTextArea.style.lineHeight = `${inputValue}px`
   })
 }
