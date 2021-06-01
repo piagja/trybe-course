@@ -11,6 +11,10 @@ body {
   justify-content: space-around;
 }
 
+h1 {
+  text-align: center;
+}
+
 #user-preferences-area {
   display: flex;
   flex-direction: column;
