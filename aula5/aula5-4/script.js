@@ -3,6 +3,7 @@ window.onload = function () {
   changeTextColor();
   changeFontSize();
   changeLineHeight();
+  changeFontFamily();
 }
 
 function changeBgColor () {
@@ -65,6 +66,17 @@ function changeLineHeight () {
 
   btnLineHeight.addEventListener("click", function () {
     const inputValue = inputLineHeight.value;
-    divTextArea.style.lineHeight = `${inputValue}px`
+    divTextArea.style.lineHeight = `${inputValue}px`;
+  })
+}
+
+function changeFontFamily () {
+  const divTextArea = document.querySelector("#text-area");
+  const btnFontFamily = document.querySelector(".fontfamily-click");
+  const inputFontFamily = document.querySelector(".fontfamily");
+
+  btnFontFamily.addEventListener("click", function () {
+    const inputValue = inputFontFamily.value;
+    divTextArea.style.fontFamily = inputValue
   })
 }
