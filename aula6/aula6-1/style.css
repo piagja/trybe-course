@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
+.speaker-form-header {
+  text-align: center;
+  background-color: rgba(230, 230, 230, 1);
+  border: 1px solid rgba(214, 217, 220, 1);
+  border-radius: 4px;
+  width: 80%;
+  margin: 40px auto 0 auto;
+  padding: 50px;
+}
+
+.speaker-form {
+  background-color: rgba(246, 247, 248);
+  border: 1px solid rgba(214, 217, 220);
+  border-radius: 4px;
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto 40px auto;
+}
+
+.line-content {
+  margin: 20px;
+}
+
+.form-row {
+  margin-bottom: 40px;
+}
