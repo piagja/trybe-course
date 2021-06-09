@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Bloco 6.1 - HTML & CSS - Formulários</title>
 </head>
+
 <body>
   <header class="speaker-form-header">
     <h1>Quer palestrar na nossa conferência?</h1>
@@ -15,11 +17,52 @@
 
   <form action="" method="GET" class="speaker-form">
     <div class="form-tow">
+
       <div class="line-content">
-        <label for="full-name">Name</label>
-        <input type="text" name="name" id="full-name" />
+        <label for="speaker-name">Name</label>
+        <input role="textbox" contenteditable type="text" placeholder="Your name, speaker" name="name" id="speaker-name">
+      </div>
+
+      <div class="line-content">
+        <fieldset class="legacy-form-row">
+          <legend>Type of Talk</legend>
+          <label for="talk-type-1">Main Stage</label>
+          <input type="radio" name="talk-type" id="talk-type-1" value="main-stage">
+  
+          <label for="talk-type-2">Workshop</label>
+          <input type="radio" name="talk-type" id="talk-type-2" value="workshop">
+        </fieldset>
+      </div>
+
+      <div class="line-content">
+        <label for="t-shirt-size">T-Shirt Size</label>
+        <select name="t-shirt" id="t-shirt-size">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+          <option value="xl">Extra Large</option>
+        </select>
+      </div>
+
+      <div class="line-content">
+        <label for="abstract-1">Abstract</label>
+        <textarea 
+          name="abstract" 
+          id="abstract-1"
+          placeholder="Describe your talk in 500 characters or less"
+          cols="40">
+        </textarea>
+      </div>
+
+      <div class="line-content">
+        <label for="available-1"><input type="checkbox" name="available" id="available-1" value="is-available">
+          I'm available for the talk.
+        </label>
+        
       </div>
     </div>
   </form>
 </body>
+
 </html>
