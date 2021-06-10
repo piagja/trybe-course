@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      integrity="undefined"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bloco 6.2 - HTML & CSS - Frameworks CSS</title>
+  </head>
+
+  <body>
+    <header class="container text-center">
+      <h1 class="display-1">Quer palestrar na nossa conferência?</h1>
+      <p class="lead"><em>Preencha o formulário abaixo!</em></p>
+    </header>
+
+    <form action="" method="GET" class="container">
+      <div class="container">
+        <div class="line-content container">
+          <label class="form-label" for="speaker-name">Name</label>
+          <input
+            class="form-control"
+            role="textbox"
+            contenteditable
+            type="text"
+            placeholder="Your name, speaker"
+            name="name"
+            id="speaker-name"
+          />
+        </div>
+
+        <div class="line-content container">
+          <fieldset class="legacy-form-row container form-control">
+            <legend>Type of Talk</legend>
+            <div class="form-check">
+              <input
+              type="radio"
+              name="talk-type"
+              id="talk-type-1"
+              value="main-stage"
+              />
+              <label class="form-label" for="talk-type-1">Main Stage</label>
+            </div>
+
+            <div class="form-check">
+              <input
+              type="radio"
+              name="talk-type"
+              id="talk-type-2"
+              value="workshop"
+              />
+              <label class="form-label" for="talk-type-2">Workshop</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="line-content container">
+          <label class="form-label" for="t-shirt-size">T-Shirt Size</label>
+          <select name="t-shirt" id="t-shirt-size" class="form-select">
+            <option value="xs">Extra Small</option>
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+            <option value="xl">Extra Large</option>
+          </select>
+        </div>
+
+        <div class="line-content container">
+          <label class="form-label" for="abstract-1">Abstract</label>
+          <textarea
+            name="abstract"
+            id="abstract-1"
+            placeholder="Describe your talk in 500 characters or less"
+            class="form-control"
+          >
+          </textarea>
+        </div>
+
+        <div class="line-content container">
+          <div class="form-check">
+            <label class="form-check-label" for="available-1">
+            <input
+            type="checkbox"
+            name="available"
+            id="available-1"
+            value="is-available"
+            class="form-check-input"
+            />
+            I'm available for the talk.
+          </div>
+          </label>
+        </div>
+        <div class="container">
+          <button class="btn btn-success">Enviar</button>
+          <button class="btn btn-danger" type="reset">Reset</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

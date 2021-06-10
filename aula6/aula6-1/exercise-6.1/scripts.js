@@ -30,15 +30,15 @@ function mountData () {
   const div = document.createElement("div");
   div.classList.add("data-submited");
   /* hora de colocar as infos pra "dentro" */
-  div.innerHTML = `
+  div.textContent = `
     <p>Nome: ${inputName}</p>
     <p>Email: ${inputEmail}</p>
     <p>CPF: ${inputCPF}</p>
     <p>Endereço: ${inputEndereco}</p>
     <p>Endereço: ${inputCidade}</p>
     <p>Endereço: ${inputEstado}</p>
-    <p>Endereço: ${inputImovelCasa}</p>
-    <p>Endereço: ${inputImovelAPT}</p>
+    <p>Endereço: ${inputImovelCasa === true ? "Casa" : ""}</p>
+    <p>Endereço: ${inputImovelAPT === true ? "Apartamento" : ""}</p>
   `;
 
   dataArea.appendChild(div);
