@@ -18,10 +18,10 @@ body {
   display: flex;
   flex-basis: 268px;
   justify-content: center;
-  order: 0;
 }
 
 .menu-container {
+  flex-grow: 1;
   display: flex;
   flex-basis: 500px;
   order: 1;
