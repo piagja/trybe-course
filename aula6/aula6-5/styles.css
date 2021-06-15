@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border: 1px solid black;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container {
+  border: 1px solid black;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container-description {
+  display: flex;
+  width: 60%;
+  order: 1;
+}
+
+img {
+  width: 90%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+}
