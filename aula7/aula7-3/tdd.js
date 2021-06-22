@@ -39,18 +39,18 @@ const assert = require('assert');
 // assert.deepStrictEqual(output, expected);
 
 /** 3 */
-const sumAllNumbers = (num) => {
-  let output = 0;
-  for (let index = 0; index < num.length; index += 1) {
-    output += num[index]
-  }
+// const sumAllNumbers = (num) => {
+//   let output = 0;
+//   for (let index = 0; index < num.length; index += 1) {
+//     output += num[index]
+//   }
 
-  return output
-}
+//   return output
+// }
 
-const numbers = [9, 23, 10, 3, 8];
-const expected = 53;
-const output = sumAllNumbers(numbers);
+// const numbers = [9, 23, 10, 3, 8];
+// const expected = 53;
+// const output = sumAllNumbers(numbers);
 
-assert.strictEqual(typeof sumAllNumbers, 'function');
-assert.strictEqual(output, expected);
+// assert.strictEqual(typeof sumAllNumbers, 'function');
+// assert.strictEqual(output, expected);
