@@ -1,0 +1,9 @@
+li > img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+li > img:hover {
+  transition: all ease 0.6s;
+  transform: scale(1.2);
+}
