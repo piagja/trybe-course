@@ -1,5 +1,5 @@
 // fazer com que uma função aguarde a outra, passa um callback como parametro
-// ai a função1 vira uma HoF
+// ai a função1 vira uma HoF assíncrona
 const funcao1 = (callback) => {
   setTimeout(() => {
     console.log('1 - Whopper')

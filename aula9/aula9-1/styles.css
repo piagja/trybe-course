@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  font-size: 4rem;
+}
+
 li > img {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 li > img:hover {
-  transition: all ease 0.6s;
-  transform: scale(1.2);
+  transition: all ease 0.3s;
+  transform: scale(1.6);
 }
