@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+  border-radius: 40%;
+}
+
+img:hover {
+  transition: all ease-in-out 0.4s;
+  transform: scale(1.2);
+}
+
+.serie-container {
+  background-color: rgb(184, 184, 255);
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.serie-card {
+  border-radius: 15px;
+  padding: 15px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.serie-card:hover {
+  transition: all ease-in-out 0.4s;
+  border: 1px solid rgba(128, 128, 128, 0.8);
+}
