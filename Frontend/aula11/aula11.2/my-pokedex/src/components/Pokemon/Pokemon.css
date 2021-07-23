@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Yomogi', cursive;
+  background-color: rgb(81, 99, 128);
+}
+
+.poke-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.poke-card {
+  background-color: rgba(87, 171, 255, 0.6);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  transform: scale(1);
+}
+
+.poke-card:hover {
+  transition: all ease-in-out 0.6s;
+  transform: scale(1.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
