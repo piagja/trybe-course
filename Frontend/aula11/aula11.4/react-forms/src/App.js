@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import LoginForm from './components/LoginForm'
-
 import './App.css'
+import Form from './Form.js'
 
 export default class App extends Component {
   render() {
     return (
-      <section className='section-login'>
-        <LoginForm />
-      </section>
+      <div>
+        <Form />
+      </div>
     )
   }
 }
