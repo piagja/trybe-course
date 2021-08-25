@@ -1,6 +1,17 @@
-import { createStore } from 'redux'
+// imports
+import categories from "./data";
 
-// store
-const store = createStore(() => {});
+import { createStore, combineReducers } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-export default store
+// global things
+
+// action types
+
+// actions
+
+// reducer
+
+
+
+
