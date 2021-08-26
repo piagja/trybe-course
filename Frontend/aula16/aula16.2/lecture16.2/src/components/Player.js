@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 class Player extends React.Component {
   render() {
     const { selectedCategory, selectedMovie } = this.props;
@@ -27,4 +29,11 @@ class Player extends React.Component {
   }
 }
 
-export default Player;
+const mapStateToProps = (state) => {
+  return {
+    selectedCategory: state.movieReducer.selectedCategory,
+    selectedMovie: state.movieReducer.selectedMovie
+  }
+};
+
+export default connect(mapStateToProps)(Player);

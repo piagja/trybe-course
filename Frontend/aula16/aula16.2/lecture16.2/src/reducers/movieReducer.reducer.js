@@ -14,11 +14,18 @@ const movieReducer = (state = INITIAL_STATE, action) => {
         ...state,
         selectedCategory: action.category,
         selectedMovie: action.movie,
-      }
+      };
+
+    case 'DELETE_MOVIE':
+      return {
+        ...state,
+        selectedCategory: action.category,
+        selectedMovie: action.movie,
+      };
 
     default:
       return state;
   }
 };
 
-export default movieReducer
+export default movieReducer;

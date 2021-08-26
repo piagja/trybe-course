@@ -1,12 +1,11 @@
-import { render } from '@testing-library/react';
+import { connect } from 'react-redux';
 import React from 'react';
+import { actionSelectMovie } from '../actions/actions';
 
 class Sidebar extends React.Component {
-  constructor(props){
-    super(props)
-  }
   render(){
-    const { categories } = this.props
+    const { categories, handleSelectMovie,  } = this.props;
+
     return (
       <aside>
         {
@@ -17,7 +16,7 @@ class Sidebar extends React.Component {
                 {
                   category.movies.map(movie => (
                     <li key={movie.id}>{movie.title} was released in {movie.released}
-                      <button type="button" onClick={() => alert('Filme Selecionado')}>
+                      <button type="button" onClick={() => handleSelectMovie(movie, category)}>
                         Select
                       </button>
                     </li>
@@ -32,4 +31,21 @@ class Sidebar extends React.Component {
   }
 };
 
-export default Sidebar
+// connect tem dois parametros
+// connect(1 ler - stateToProps)(2 escrever - dispatchToProps)
+
+// com o mapStateToProps - quero pegar todo o estado do redux e passar via props
+const mapStateToProps = (state) => {
+  return ({
+    categories: state.movieReducer.categories
+  })
+}
+
+// com o mapDispatchToProps - recebe o dispatch como param e retorna um objeto
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    handleSelectMovie: (movie, category) => dispatch(actionSelectMovie(movie, category))
+  })
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar)
