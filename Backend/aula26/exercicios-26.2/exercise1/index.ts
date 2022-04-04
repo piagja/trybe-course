@@ -19,8 +19,14 @@ class Car {
     return `*HONK* *HONK*`
   }
 
-  openTheDoor (door: Car): string {
-    return 'ola'
+  openTheDoor (door: CarDoors): string {
+    const message = `Abrindo a porta ${door}`
+    return message
+  }
+
+  closeTheDoor (door: CarDoors): string {
+    const message = `Fechando a porta ${door}`
+    return message
   }
 }
 
