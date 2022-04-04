@@ -56,18 +56,3 @@ class Car {
     return message
   }
 }
-
-const car = new Car('Ford', CarColors.Black, 4)
-console.log(car.honk())
-console.log(car.openTheDoor(CarDoors.DRIVER))
-console.log(car.closeTheDoor(CarDoors.DRIVER))
-console.log(car.turnOn())
-console.log(car.speedUp(100))
-console.log(car.turn(Directions.LEFT))
-console.log(car.speedDown(50))
-console.log(car.stop())
-console.log(car.turnOff())
-console.log(car.turn(Directions.RIGHT))
-console.log(car.speedUp(100))
-console.log(car.turn(Directions.LEFT))
-console.log(car.speedDown(50))
