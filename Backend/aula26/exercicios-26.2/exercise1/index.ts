@@ -19,41 +19,41 @@ class Car {
     return `*HONK* *HONK*`
   }
 
-  openTheDoor (door: CarDoors): string {
+  openTheDoor (door: CarDoors): void {
     const message = `Abrindo a porta ${door}`
-    return message
+    return console.log(message)
   }
 
-  closeTheDoor (door: CarDoors): string {
+  closeTheDoor (door: CarDoors): void {
     const message = `Fechando a porta ${door}`
-    return message
+    return console.log(message)
   }
 
-  turnOn (): string {
-    return `Ligando o carro`
+  turnOn (): void {
+    return console.log(`Ligando o carro`)
   }
 
-  turnOff (): string {
-    return `Desligando o carro`
+  turnOff (): void {
+    return console.log(`Desligando o carro`)
   }
 
-  speedUp (meters: number): string {
-    const message = `Acelerando o carro para ${meters} metros`
-    return message
+  speedUp (meters: number): void {
+    const message = `Acelerando o carro mais ${meters} metros`
+    return console.log(message)
   }
 
-  speedDown (): string {
+  speedDown (): void {
     const message = `Desacelerando o carro`
-    return message
+    return console.log(message)
   }
 
-  stop (): string {
-    return `Parando o carro`
+  stop (): void {
+    return console.log(`Parando o carro`)
   }
 
-  turn (direction: Directions): string {
+  turn (direction: Directions): void {
     const message = `Virando o carro para ${direction}`
-    return message
+    return console.log(message)
   }
 }
 
