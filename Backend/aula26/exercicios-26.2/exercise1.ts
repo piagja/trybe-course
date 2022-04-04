@@ -27,4 +27,4 @@ class Car implements ICar {
 }
 
 const car = new Car('Ford', CarColor.Black, 4);
-console.log(car)
+console.log(car.honk())
