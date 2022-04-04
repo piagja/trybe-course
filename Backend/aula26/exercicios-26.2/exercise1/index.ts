@@ -37,13 +37,13 @@ class Car {
     return `Desligando o carro`
   }
 
-  speedUp (speed: number): string {
-    const message = `Acelerando o carro para ${speed}`
+  speedUp (meters: number): string {
+    const message = `Acelerando o carro para ${meters} metros`
     return message
   }
 
-  speedDown (speed: number): string {
-    const message = `Desacelerando o carro para ${speed}`
+  speedDown (): string {
+    const message = `Desacelerando o carro`
     return message
   }
 
@@ -56,3 +56,5 @@ class Car {
     return message
   }
 }
+
+export default Car
