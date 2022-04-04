@@ -28,6 +28,24 @@ class Car {
     const message = `Fechando a porta ${door}`
     return message
   }
+
+  turnOn (): string {
+    return `Ligando o carro`
+  }
+
+  turnOff (): string {
+    return `Desligando o carro`
+  }
+
+  speedUp (speed: number): string {
+    const message = `Acelerando o carro para ${speed}`
+    return message
+  }
+
+  speedDown (speed: number): string {
+    const message = `Desacelerando o carro para ${speed}`
+    return message
+  }
 }
 
 const car = new Car('Ford', CarColors.Black, 4)
